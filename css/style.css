@@ -1,0 +1,4624 @@
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: "Noto Nastaliq Urdu", serif;
+
+    background: #5A003F;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   WELCOME PAGE
+========================================================= */
+
+.welcome-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 159, 192, 0.35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(155, 93, 229, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #5A003F 0%,
+            #8c155e 35%,
+            #FF4F87 70%,
+            #9B5DE5 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND EFFECTS
+========================================================= */
+
+.background-effects {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: 0.45;
+
+    animation: glowMove 8s ease-in-out infinite alternate;
+}
+
+.glow-one {
+    width: 280px;
+    height: 280px;
+
+    top: -100px;
+    right: -70px;
+
+    background: #FF9FC0;
+}
+
+.glow-two {
+    width: 350px;
+    height: 350px;
+
+    bottom: -160px;
+    left: -100px;
+
+    background: #9B5DE5;
+
+    animation-delay: 2s;
+}
+
+.glow-three {
+    width: 180px;
+    height: 180px;
+
+    top: 45%;
+    left: 15%;
+
+    background: #FF4F87;
+
+    animation-delay: 4s;
+}
+
+@keyframes glowMove {
+
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(30px, -25px) scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 30px;
+
+    animation: floatingHeart 7s ease-in-out infinite;
+}
+
+.heart-1 {
+    top: 15%;
+    left: 12%;
+
+    animation-delay: 0s;
+}
+
+.heart-2 {
+    top: 65%;
+    right: 10%;
+
+    font-size: 22px;
+
+    animation-delay: 2s;
+}
+
+.heart-3 {
+    bottom: 12%;
+    left: 25%;
+
+    font-size: 18px;
+
+    animation-delay: 4s;
+}
+
+@keyframes floatingHeart {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: translateY(-35px) rotate(12deg);
+        opacity: 0.65;
+    }
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.star {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+.star-1 {
+    top: 18%;
+    right: 20%;
+
+    font-size: 25px;
+}
+
+.star-2 {
+    top: 35%;
+    left: 8%;
+
+    font-size: 20px;
+
+    animation-delay: 1s;
+}
+
+.star-3 {
+    bottom: 20%;
+    right: 25%;
+
+    font-size: 28px;
+
+    animation-delay: 1.5s;
+}
+
+.star-4 {
+    bottom: 30%;
+    left: 18%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+}
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.particle {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+
+    animation: particleFloat 6s linear infinite;
+}
+
+.particle-1 {
+    top: 20%;
+    left: 30%;
+}
+
+.particle-2 {
+    top: 70%;
+    left: 40%;
+
+    animation-delay: 1s;
+}
+
+.particle-3 {
+    top: 30%;
+    right: 35%;
+
+    animation-delay: 2s;
+}
+
+.particle-4 {
+    bottom: 20%;
+    right: 15%;
+
+    animation-delay: 3s;
+}
+
+.particle-5 {
+    top: 55%;
+    left: 12%;
+
+    animation-delay: 1.5s;
+}
+
+.particle-6 {
+    bottom: 40%;
+    right: 40%;
+
+    animation-delay: 4s;
+}
+
+@keyframes particleFloat {
+
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   BALLOONS
+========================================================= */
+
+.balloon {
+    position: absolute;
+
+    width: 55px;
+    height: 70px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    opacity: 0.6;
+
+    animation: balloonFloat 7s ease-in-out infinite;
+}
+
+.balloon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 90px;
+
+    top: 68px;
+    left: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.balloon-one {
+    left: 5%;
+    bottom: -20px;
+
+    background: #FF9FC0;
+
+    animation-delay: 0s;
+}
+
+.balloon-two {
+    right: 6%;
+    bottom: -30px;
+
+    background: #9B5DE5;
+
+    animation-delay: 2s;
+}
+
+.balloon-three {
+    left: 17%;
+    top: 8%;
+
+    width: 42px;
+    height: 55px;
+
+    background: #FF4F87;
+
+    animation-delay: 3s;
+}
+
+.balloon-four {
+    right: 18%;
+    top: 12%;
+
+    width: 45px;
+    height: 58px;
+
+    background: #FF9FC0;
+
+    animation-delay: 1s;
+}
+
+@keyframes balloonFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+}
+
+
+/* =========================================================
+   WELCOME CONTENT
+========================================================= */
+
+.welcome-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(900px, 92%);
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    animation: contentAppear 1.5s ease forwards;
+}
+
+@keyframes contentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   SMALL INTRO
+========================================================= */
+
+.small-intro {
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: clamp(15px, 2vw, 20px);
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PERSON NAME
+========================================================= */
+
+.person-name {
+    margin-bottom: 10px;
+
+    font-size: clamp(45px, 8vw, 90px);
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(255, 159, 192, 0.8),
+        0 0 35px rgba(255, 79, 135, 0.45);
+
+    animation: nameGlow 4s ease-in-out infinite;
+}
+
+@keyframes nameGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 15px rgba(255, 159, 192, 0.7),
+            0 0 30px rgba(255, 79, 135, 0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 25px rgba(255, 159, 192, 1),
+            0 0 50px rgba(255, 79, 135, 0.6);
+    }
+}
+
+
+/* =========================================================
+   BIRTHDAY TITLE
+========================================================= */
+
+.birthday-title {
+    margin-bottom: 18px;
+
+    font-size: clamp(28px, 5vw, 55px);
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    color: #fff1f7;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.birthday-message {
+    max-width: 720px;
+
+    margin: 0 auto 8px;
+
+    font-size: clamp(17px, 2.3vw, 25px);
+
+    line-height: 2;
+
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.dua-message {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    font-size: clamp(15px, 2vw, 20px);
+
+    line-height: 2;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   QUESTION CARD
+========================================================= */
+
+.question-card {
+    width: min(420px, 90%);
+
+    margin: 20px auto 0;
+
+    padding: 25px 25px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(40, 0, 30, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+    animation: cardFloat 5s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* =========================================================
+   QUESTION HEART
+========================================================= */
+
+.question-heart {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    background: rgba(255, 79, 135, 0.35);
+
+    box-shadow:
+        0 0 25px rgba(255, 79, 135, 0.5);
+
+    animation: heartBeat 1.8s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+.question-card h3 {
+    margin-bottom: 18px;
+
+    font-size: clamp(22px, 3vw, 30px);
+
+    font-weight: 500;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   YES BUTTON
+========================================================= */
+
+.yes-button {
+    position: relative;
+
+    border: none;
+    outline: none;
+
+    padding: 12px 32px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FF4F87,
+            #9B5DE5
+        );
+
+    box-shadow:
+        0 8px 25px rgba(255, 79, 135, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.yes-button span {
+    display: inline-block;
+
+    margin-right: 5px;
+
+    transition: transform 0.3s ease;
+}
+
+.yes-button:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 12px 35px rgba(255, 79, 135, 0.55);
+}
+
+.yes-button:hover span {
+    transform: scale(1.25);
+}
+
+.yes-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   SCROLL HINT
+========================================================= */
+
+.scroll-hint {
+    position: absolute;
+
+    bottom: 18px;
+    left: 50%;
+
+    z-index: 5;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+.scroll-arrow {
+    font-size: 20px;
+
+    animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+/* =========================================================
+   HEART EXPLOSION
+========================================================= */
+
+.heart-explosion {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+.explosion-heart {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    color: #ff9fc0;
+
+    font-size: 22px;
+
+    transform: translate(-50%, -50%);
+
+    animation: explodeHeart 1.5s ease-out forwards;
+}
+
+@keyframes explodeHeart {
+
+    0% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(1.5)
+            rotate(25deg);
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .welcome-content {
+        padding: 25px 12px 50px;
+    }
+
+    .person-name {
+        margin-bottom: 5px;
+    }
+
+    .birthday-message {
+        line-height: 2.1;
+    }
+
+    .dua-message {
+        margin-bottom: 22px;
+
+        line-height: 2;
+    }
+
+    .question-card {
+        padding: 22px 18px 26px;
+
+        border-radius: 24px;
+    }
+
+    .balloon-one,
+    .balloon-two {
+        transform: scale(0.75);
+    }
+
+    .balloon-three,
+    .balloon-four {
+        transform: scale(0.7);
+    }
+
+    .heart-1 {
+        left: 4%;
+    }
+
+    .heart-2 {
+        right: 4%;
+    }
+
+    .scroll-hint {
+        bottom: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .welcome-page {
+        min-height: 100svh;
+    }
+
+    .welcome-content {
+        width: 96%;
+        padding-top: 15px;
+    }
+
+    .small-intro {
+        font-size: 14px;
+    }
+
+    .person-name {
+        font-size: 45px;
+    }
+
+    .birthday-title {
+        font-size: 28px;
+    }
+
+    .birthday-message {
+        font-size: 16px;
+    }
+
+    .dua-message {
+        font-size: 14px;
+    }
+
+    .question-card {
+        margin-top: 12px;
+    }
+
+    .question-card h3 {
+        font-size: 22px;
+    }
+
+    .yes-button {
+        min-width: 145px;
+
+        padding: 11px 25px;
+
+        font-size: 18px;
+    }
+
+    .star,
+    .floating-heart {
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================================
+   PAGE 2 — MEMORIES
+========================================= */
+
+.memories-page {
+    min-height: 100vh;
+    padding: 70px 6%;
+    background:
+        radial-gradient(circle at top right, rgba(255, 105, 180, 0.25), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(160, 80, 255, 0.25), transparent 35%),
+        linear-gradient(135deg, #16001f, #3b073f, #16001f);
+    color: white;
+}
+
+/* Header */
+
+.memories-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.section-small-title {
+    font-size: 18px;
+    color: #ff9edb;
+    margin-bottom: 10px;
+}
+
+.memories-header h1 {
+    font-size: clamp(40px, 6vw, 70px);
+    margin: 0 0 20px;
+    color: #fff;
+    text-shadow:
+        0 0 10px rgba(255, 105, 180, 0.7),
+        0 0 30px rgba(255, 105, 180, 0.4);
+}
+
+.memories-header > p:last-child {
+    font-size: 18px;
+    line-height: 2;
+    color: #f8dff1;
+}
+
+/* Gallery */
+
+.memory-gallery {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Memory Card */
+
+.memory-card {
+    overflow: hidden;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 50px rgba(255, 72, 180, 0.25),
+        0 0 25px rgba(255, 105, 180, 0.15);
+}
+
+/* Photo */
+
+.memory-card img {
+    width: 100%;
+    height: 320px;
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.memory-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Text */
+
+.memory-content {
+    padding: 22px;
+}
+
+.memory-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+    color: #ffb5df;
+}
+
+.memory-content p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 2;
+
+    color: #f7e8f3;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .memory-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .memories-page {
+        padding: 60px 4%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .memories-page {
+        padding: 45px 18px;
+    }
+
+    .memories-header {
+        margin-bottom: 35px;
+    }
+
+    .memories-header h1 {
+        font-size: 40px;
+        line-height: 1.5;
+    }
+
+    .memories-header > p:last-child {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .memory-gallery {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .memory-card {
+        border-radius: 20px;
+    }
+
+    .memory-card img {
+        height: 280px;
+    }
+
+    .memory-content {
+        padding: 18px;
+    }
+
+    .memory-content h2 {
+        font-size: 21px;
+    }
+
+    .memory-content p {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM LIGHTBOX
+========================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(180, 40, 130, 0.20),
+            rgba(10, 0, 15, 0.96) 70%
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    z-index: 9999;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================
+   LIGHTBOX ACTIVE
+========================================= */
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* =========================================
+   LIGHTBOX CONTENT
+========================================= */
+
+.lightbox-content {
+    position: relative;
+
+    width: min(900px, 94vw);
+
+    margin: auto 0;
+
+    flex-shrink: 0;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.04)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 60px rgba(255, 80, 180, 0.18);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow: visible;
+
+    animation: lightboxOpen 0.4s ease;
+}
+
+
+/* =========================================
+   LIGHTBOX IMAGE
+========================================= */
+
+.lightbox-content img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   LIGHTBOX TEXT
+========================================= */
+
+.lightbox-text {
+    width: 100%;
+
+    padding: 20px 15px 8px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.lightbox-text h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: clamp(22px, 3vw, 32px);
+
+    line-height: 1.5;
+
+    text-shadow:
+        0 0 15px rgba(255, 120, 200, 0.6);
+}
+
+.lightbox-text p {
+    margin: 0 auto;
+
+    max-width: 750px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: clamp(15px, 2vw, 18px);
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    background: rgba(20, 0, 25, 0.75);
+
+    color: #ffffff;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg) scale(1.08);
+
+    background: rgba(255, 60, 170, 0.65);
+
+    box-shadow:
+        0 0 25px rgba(255, 80, 180, 0.55);
+}
+
+
+/* =========================================
+   OPEN ANIMATION
+========================================= */
+
+@keyframes lightboxOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE — ANDROID / iPHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .lightbox {
+        padding: 15px 8px;
+
+        align-items: flex-start;
+
+        overflow-y: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .lightbox-content {
+        width: 96vw;
+
+        margin: 20px 0;
+
+        padding: 10px;
+
+        border-radius: 20px;
+    }
+
+    .lightbox-content img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+
+        border-radius: 15px;
+    }
+
+    .lightbox-text {
+        padding: 15px 8px 8px;
+    }
+
+    .lightbox-text h2 {
+        font-size: 22px;
+
+        line-height: 1.6;
+    }
+
+    .lightbox-text p {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .lightbox-close {
+        top: 8px;
+        left: 8px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .lightbox {
+        padding: 10px 5px;
+    }
+
+    .lightbox-content {
+        width: 97vw;
+
+        margin: 15px 0;
+
+        padding: 8px;
+
+        border-radius: 18px;
+    }
+
+    .lightbox-content img {
+        border-radius: 12px;
+    }
+
+    .lightbox-text h2 {
+        font-size: 20px;
+    }
+
+    .lightbox-text p {
+        font-size: 14px;
+    }
+
+    .lightbox-close {
+        width: 37px;
+        height: 37px;
+
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   PHOTO ENTRANCE ANIMATION
+========================================= */
+
+.memory-card {
+
+    animation:
+        memoryFadeUp
+        0.8s
+        ease
+        both;
+}
+
+
+/* Different delays */
+
+.memory-card:nth-child(1)  {
+    animation-delay: 0.05s;
+}
+
+.memory-card:nth-child(2)  {
+    animation-delay: 0.10s;
+}
+
+.memory-card:nth-child(3)  {
+    animation-delay: 0.15s;
+}
+
+.memory-card:nth-child(4)  {
+    animation-delay: 0.20s;
+}
+
+.memory-card:nth-child(5)  {
+    animation-delay: 0.25s;
+}
+
+.memory-card:nth-child(6)  {
+    animation-delay: 0.30s;
+}
+
+.memory-card:nth-child(7)  {
+    animation-delay: 0.35s;
+}
+
+.memory-card:nth-child(8)  {
+    animation-delay: 0.40s;
+}
+
+.memory-card:nth-child(9)  {
+    animation-delay: 0.45s;
+}
+
+.memory-card:nth-child(10) {
+    animation-delay: 0.50s;
+}
+
+.memory-card:nth-child(11) {
+    animation-delay: 0.55s;
+}
+
+.memory-card:nth-child(12) {
+    animation-delay: 0.60s;
+}
+
+.memory-card:nth-child(13) {
+    animation-delay: 0.65s;
+}
+
+.memory-card:nth-child(14) {
+    animation-delay: 0.70s;
+}
+
+.memory-card:nth-child(15) {
+    animation-delay: 0.75s;
+}
+
+.memory-card:nth-child(16) {
+    animation-delay: 0.80s;
+}
+
+.memory-card:nth-child(17) {
+    animation-delay: 0.85s;
+}
+
+.memory-card:nth-child(18) {
+    animation-delay: 0.90s;
+}
+
+.memory-card:nth-child(19) {
+    animation-delay: 0.95s;
+}
+
+.memory-card:nth-child(20) {
+    animation-delay: 1s;
+}
+
+.memory-card:nth-child(21) {
+    animation-delay: 1.05s;
+}
+
+.memory-card:nth-child(22) {
+    animation-delay: 1.10s;
+}
+
+
+/* Animation */
+
+@keyframes memoryFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .poetry-section {
+
+        margin-top: 60px;
+
+        padding: 0 14px;
+    }
+
+
+    .poetry-card {
+
+        padding: 40px 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .poetry-card h2 {
+
+        font-size: 32px;
+    }
+
+
+    .poetry-text p {
+
+        font-size: 16px;
+
+        line-height: 2.2;
+    }
+
+}
+
+/* =========================================
+   PREMIUM PHOTO CARD EFFECT
+========================================= */
+
+.memory-card {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* Glowing border */
+
+.memory-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    padding: 1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 150, 210, 0.7),
+            transparent,
+            rgba(190, 120, 255, 0.7)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
+.memory-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(255, 105, 180, 0.20);
+}
+
+
+.memory-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================
+   PHOTO ZOOM
+========================================= */
+
+.memory-card .memory-photo {
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+.memory-card:hover .memory-photo {
+
+    transform: scale(1.07);
+
+    filter:
+        brightness(1.05)
+        saturate(1.1);
+}
+
+
+/* =========================================
+   PHOTO OVERLAY
+========================================= */
+
+.memory-card::after {
+
+    content: "♥";
+
+    position: absolute;
+
+    left: 50%;
+    top: 42%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    font-size: 42px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px #ff69b4,
+        0 0 30px #ff69b4;
+
+    opacity: 0;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+
+    pointer-events: none;
+}
+
+
+.memory-card:hover::after {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .memory-card:hover {
+
+        transform: none;
+
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .memory-card:hover .memory-photo {
+
+        transform: scale(1.03);
+    }
+
+}
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+
+.floating-hearts span {
+
+    position: absolute;
+
+    bottom: -60px;
+
+    color: rgba(255, 180, 225, 0.65);
+
+    font-size: px;
+
+    animation:
+        floatHeart 12s linear infinite;
+}
+
+
+/* Different positions */
+
+.floating-hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 14s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 35%;
+    animation-delay: 4s;
+    animation-duration: 12s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 48%;
+    animation-delay: 1s;
+    animation-duration: 15s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 62%;
+    animation-delay: 5s;
+    animation-duration: 13s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 75%;
+    animation-delay: 3s;
+    animation-duration: 16s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 87%;
+    animation-delay: 6s;
+    animation-duration: 12s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 94%;
+    animation-delay: 8s;
+    animation-duration: 15s;
+}
+
+
+/* Animation */
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translateY(-50vh)
+            rotate(180deg)
+            scale(1);
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(0.6);
+
+        opacity: 0;
+    }
+}
+
+
+/* Keep website content above hearts */
+
+.memories-page {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================
+   PREMIUM MEMORY CARDS
+========================================= */
+
+.memory-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    cursor: pointer;
+
+    /* Scroll animation */
+    opacity: 0;
+    transform: translateY(35px);
+    animation: memoryCardAppear 0.8s ease forwards;
+}
+
+
+/* Different animation delays */
+
+.memory-card:nth-child(1)  { animation-delay: 0.05s; }
+.memory-card:nth-child(2)  { animation-delay: 0.10s; }
+.memory-card:nth-child(3)  { animation-delay: 0.15s; }
+.memory-card:nth-child(4)  { animation-delay: 0.20s; }
+.memory-card:nth-child(5)  { animation-delay: 0.25s; }
+.memory-card:nth-child(6)  { animation-delay: 0.30s; }
+.memory-card:nth-child(7)  { animation-delay: 0.35s; }
+.memory-card:nth-child(8)  { animation-delay: 0.40s; }
+.memory-card:nth-child(9)  { animation-delay: 0.45s; }
+.memory-card:nth-child(10) { animation-delay: 0.50s; }
+
+
+@keyframes memoryCardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.memory-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(255, 120, 200, 0.4);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(255, 80, 180, 0.12);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.memory-card .memory-photo {
+
+    display: block;
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* Image zoom */
+
+.memory-card:hover .memory-photo {
+
+    transform: scale(1.06);
+
+    filter:
+        brightness(1.05)
+        saturate(1.08);
+}
+
+
+
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.memory-card h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 18px 18px 6px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 190, 0.4);
+}
+
+
+.memory-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 0 20px 22px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .memory-card {
+
+        border-radius: 20px;
+    }
+
+    .memory-card .memory-photo {
+
+        height: auto;
+
+        max-height: 420px;
+
+        object-fit: cover;
+    }
+
+    .memory-card h2 {
+
+        font-size: 20px;
+
+        padding:
+            15px 15px 5px;
+    }
+
+    .memory-card p {
+
+        font-size: 14px;
+
+        line-height: 1.85;
+
+        padding:
+            0 16px 18px;
+    }
+
+    /* Disable hover movement on touch screens */
+
+    .memory-card:hover {
+
+        transform: none;
+    }
+
+    .memory-card:hover .memory-photo {
+
+        transform: none;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .memory-card .memory-photo {
+
+        max-height: 350px;
+    }
+
+    .memory-card h2 {
+
+        font-size: 19px;
+    }
+
+    .memory-card p {
+
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================
+   MEMORY GALLERY LAYOUT
+========================================= */
+
+.memory-gallery {
+    width: min(1200px, 92%);
+    margin: 50px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .memory-gallery {
+        width: 92%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .memory-gallery {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .memory-gallery {
+        width: 94%;
+
+        gap: 18px;
+    }
+}
+
+
+/* =========================================
+   PREMIUM POETRY SECTION
+========================================= */
+
+.poetry-section {
+    width: min(900px, 92%);
+    margin: 80px auto 70px;
+
+    position: relative;
+
+    padding: 55px 45px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border: 1px solid rgba(255, 180, 225, 0.22);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3),
+        0 0 45px rgba(255, 70, 180, 0.10);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow: hidden;
+}
+
+
+/* Soft glow inside card */
+
+.poetry-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 80, 190, 0.18);
+
+    filter: blur(50px);
+
+    pointer-events: none;
+}
+
+
+/* Bottom glow */
+
+.poetry-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    bottom: -100px;
+    left: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(170, 70, 255, 0.15);
+
+    filter: blur(50px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   POETRY SMALL TITLE
+========================================= */
+
+.poetry-section .poetry-small-title {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 190, 225, 0.8);
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   POETRY HEADING
+========================================= */
+
+.poetry-section h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: clamp(28px, 5vw, 42px);
+
+    line-height: 1.6;
+
+    text-shadow:
+        0 0 18px rgba(255, 100, 195, 0.55);
+}
+
+
+/* =========================================
+   POEM TEXT
+========================================= */
+
+.poetry-section .poem {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: clamp(17px, 2.5vw, 21px);
+
+    line-height: 2.3;
+}
+
+
+/* =========================================
+   DECORATIVE HEART
+========================================= */
+
+.poetry-section .poetry-heart {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin: 25px auto 0;
+
+    color: rgba(255, 150, 215, 0.75);
+
+    font-size: 24px;
+
+    animation: poetryHeart 2.5s ease-in-out infinite;
+}
+
+
+@keyframes poetryHeart {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.65;
+    }
+
+    50% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .poetry-section {
+        width: 92%;
+
+        margin: 55px auto 45px;
+
+        padding: 38px 20px;
+
+        border-radius: 24px;
+    }
+
+    .poetry-section .poetry-small-title {
+        font-size: 14px;
+    }
+
+    .poetry-section h2 {
+        font-size: 28px;
+
+        margin-bottom: 18px;
+    }
+
+    .poetry-section .poem {
+        font-size: 16px;
+
+        line-height: 2.1;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .poetry-section {
+        width: 94%;
+
+        padding: 32px 16px;
+    }
+
+    .poetry-section h2 {
+        font-size: 25px;
+    }
+
+    .poetry-section .poem {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM MEMORIES HEADER
+========================================= */
+
+.memories-header {
+    position: relative;
+
+    width: min(900px, 92%);
+    margin: 0 auto 55px;
+
+    padding: 55px 25px 35px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* Soft glow behind heading */
+
+.memories-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 180px;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(255, 70, 180, 0.14);
+
+    filter: blur(65px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Small heading */
+
+.memories-header .section-small-title {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    color: rgba(255, 190, 225, 0.85);
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    letter-spacing: 1px;
+}
+
+
+/* Main heading */
+
+.memories-header h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(32px, 6vw, 52px);
+
+    line-height: 1.6;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 12px rgba(255, 100, 195, 0.55),
+        0 0 35px rgba(255, 60, 180, 0.22);
+}
+
+
+/* Description */
+
+.memories-header > p:last-child {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 16px;
+
+    line-height: 2.2;
+}
+
+
+/* Decorative line */
+
+.memories-header::after {
+    content: "♡";
+
+    display: block;
+
+    margin: 18px auto 0;
+
+    color: rgba(255, 160, 215, 0.75);
+
+    font-size: 25px;
+
+    animation: headerHeart 2.5s ease-in-out infinite;
+}
+
+
+@keyframes headerHeart {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .memories-header {
+        width: 94%;
+
+        margin-bottom: 35px;
+
+        padding: 40px 15px 25px;
+    }
+
+    .memories-header .section-small-title {
+        font-size: 14px;
+    }
+
+    .memories-header h1 {
+        font-size: 30px;
+
+        line-height: 1.7;
+    }
+
+    .memories-header > p:last-child {
+        font-size: 14px;
+
+        line-height: 2;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .memories-header {
+        padding-top: 30px;
+    }
+
+    .memories-header h1 {
+        font-size: 27px;
+    }
+
+    .memories-header > p:last-child {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   PREMIUM POETRY CARD
+========================================= */
+
+.poetry-section {
+    width: min(900px, 92%);
+    margin: 75px auto 60px;
+}
+
+.poetry-card {
+    position: relative;
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border: 1px solid rgba(255, 180, 225, 0.22);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30),
+        0 0 45px rgba(255, 70, 180, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   GLOW
+========================================= */
+
+.poetry-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    top: -120px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 70, 180, 0.16);
+
+    filter: blur(55px);
+
+    pointer-events: none;
+}
+
+.poetry-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    bottom: -110px;
+    left: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(150, 70, 255, 0.13);
+
+    filter: blur(55px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.poetry-card .section-small-title {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    color: rgba(255, 190, 225, 0.85);
+
+    font-size: 16px;
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.poetry-card h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: clamp(30px, 5vw, 44px);
+
+    line-height: 1.6;
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 195, 0.55);
+}
+
+
+/* =========================================
+   POETRY TEXT
+========================================= */
+
+.poetry-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: clamp(17px, 2.4vw, 21px);
+
+    line-height: 2.4;
+}
+
+.poetry-text p {
+    margin: 0 0 15px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .poetry-section {
+        width: 92%;
+
+        margin: 50px auto 40px;
+    }
+
+    .poetry-card {
+        padding: 38px 20px;
+
+        border-radius: 24px;
+    }
+
+    .poetry-card .section-small-title {
+        font-size: 14px;
+    }
+
+    .poetry-card h2 {
+        font-size: 28px;
+
+        margin-bottom: 18px;
+    }
+
+    .poetry-text {
+        font-size: 16px;
+
+        line-height: 2.15;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .poetry-card {
+        padding: 32px 16px;
+    }
+
+    .poetry-card h2 {
+        font-size: 25px;
+    }
+
+    .poetry-text {
+        font-size: 15px;
+
+        line-height: 2;
+    }
+}
+
+/* =========================================
+   PHOTO CLICK / TAP EFFECT
+   ========================================= */
+
+.memory-card::after {
+    content: "تصویر دیکھنے کے لیے دبائیں";
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%) translateY(10px);
+
+    padding: 7px 16px;
+    border-radius: 30px;
+
+    background: rgba(40, 10, 35, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #fff;
+    font-size: 13px;
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+    pointer-events: none;
+    z-index: 3;
+}
+
+
+/* Desktop hover */
+
+.memory-card:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .memory-card::after {
+        opacity: 0.85;
+        transform: translateX(-50%) translateY(0);
+
+        font-size: 12px;
+        padding: 6px 13px;
+        bottom: 14px;
+    }
+
+}
+
+
+/* Very small phones */
+
+@media (max-width: 380px) {
+
+    .memory-card::after {
+        font-size: 11px;
+        padding: 5px 11px;
+        bottom: 12px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM LIGHTBOX EFFECT
+   ========================================= */
+
+.lightbox {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(180, 30, 130, 0.28),
+            rgba(15, 5, 20, 0.96) 65%
+        );
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* Lightbox card animation */
+
+.lightbox.active .lightbox-content {
+    animation: lightboxOpen 0.45s ease forwards;
+}
+
+
+@keyframes lightboxOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* Image glow */
+
+.lightbox-content img {
+    box-shadow:
+        0 0 25px rgba(255, 100, 200, 0.25),
+        0 0 70px rgba(180, 50, 160, 0.18);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* Slight zoom when opened */
+
+.lightbox.active .lightbox-content img {
+    animation: imageReveal 0.7s ease forwards;
+}
+
+
+@keyframes imageReveal {
+
+    from {
+        transform: scale(0.94);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+
+/* Premium close button */
+
+.lightbox-close {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.lightbox-close:hover {
+    transform: rotate(90deg) scale(1.08);
+
+    background: rgba(255, 100, 190, 0.3);
+
+    box-shadow:
+        0 0 20px rgba(255, 100, 200, 0.4);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .lightbox {
+        padding: 70px 12px 25px;
+        box-sizing: border-box;
+    }
+
+    .lightbox-content {
+        width: 94vw;
+    }
+
+    .lightbox-content img {
+        max-height: 62vh;
+    }
+
+}
+
+
+/* Very small phones */
+
+@media (max-width: 380px) {
+
+    .lightbox {
+        padding-top: 65px;
+    }
+
+    .lightbox-content img {
+        max-height: 58vh;
+    }
+
+}
+
+/* =========================================
+   CINEMATIC ROMANTIC POETRY SECTION
+   ========================================= */
+
+.poetry-section {
+    position: relative;
+    width: min(900px, 92%);
+    margin: 100px auto 80px;
+    padding: 10px 0;
+}
+
+
+/* Main poetry card */
+
+.poetry-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 70px 55px;
+
+    text-align: center;
+
+    border-radius: 36px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 120, 200, 0.14),
+            rgba(110, 40, 140, 0.20),
+            rgba(30, 10, 45, 0.72)
+        );
+
+    border: 1px solid rgba(255, 190, 235, 0.28);
+
+    box-shadow:
+        0 25px 80px rgba(80, 10, 70, 0.45),
+        inset 0 0 50px rgba(255, 100, 200, 0.06);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    animation: poetryFloat 5s ease-in-out infinite;
+}
+
+
+/* Large decorative heart */
+
+.poetry-card::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: -45px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 150px;
+
+    color: rgba(255, 160, 220, 0.06);
+
+    text-shadow:
+        0 0 40px rgba(255, 100, 200, 0.2);
+
+    pointer-events: none;
+}
+
+
+/* Cinematic glow */
+
+.poetry-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: 50%;
+    bottom: -180px;
+
+    transform: translateX(-50%);
+
+    background: rgba(255, 70, 190, 0.22);
+
+    filter: blur(80px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Small heading */
+
+.poetry-card .section-small-title {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: rgba(255, 205, 235, 0.85);
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 12px rgba(255, 130, 210, 0.5);
+}
+
+
+/* Main heading */
+
+.poetry-card h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 35px;
+
+    font-size: clamp(32px, 5vw, 52px);
+
+    font-weight: 600;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px rgba(255, 150, 220, 0.45),
+        0 0 35px rgba(255, 80, 190, 0.25);
+}
+
+
+/* Decorative line */
+
+.poetry-card h2::after {
+    content: "✦";
+
+    display: block;
+
+    margin: 15px auto 0;
+
+    font-size: 18px;
+
+    color: rgba(255, 190, 230, 0.75);
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 200, 0.7);
+}
+
+
+/* Poetry text */
+
+.poetry-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 30px 25px;
+
+    border-top: 1px solid rgba(255, 200, 235, 0.15);
+    border-bottom: 1px solid rgba(255, 200, 235, 0.15);
+}
+
+
+/* Individual poetry lines */
+
+.poetry-text p {
+    margin: 12px 0;
+
+    color: rgba(255, 240, 250, 0.92);
+
+    font-size: clamp(18px, 2.5vw, 23px);
+
+    line-height: 2.2;
+
+    text-shadow:
+        0 0 12px rgba(255, 120, 200, 0.18);
+
+    transition:
+        transform 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+
+/* Hover poetry effect */
+
+.poetry-text p:hover {
+    transform: translateY(-3px);
+
+    text-shadow:
+        0 0 15px rgba(255, 130, 210, 0.55),
+        0 0 30px rgba(255, 70, 190, 0.25);
+}
+
+
+/* Floating animation */
+
+@keyframes poetryFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .poetry-section {
+        width: 94%;
+        margin: 65px auto 50px;
+    }
+
+    .poetry-card {
+        padding: 50px 20px;
+
+        border-radius: 28px;
+
+        animation: none;
+    }
+
+    .poetry-card::before {
+        font-size: 110px;
+        top: -30px;
+    }
+
+    .poetry-card .section-small-title {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .poetry-card h2 {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+
+    .poetry-text {
+        padding: 22px 12px;
+    }
+
+    .poetry-text p {
+        font-size: 17px;
+        line-height: 2.1;
+        margin: 10px 0;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .poetry-section {
+        width: 95%;
+    }
+
+    .poetry-card {
+        padding: 42px 15px;
+        border-radius: 24px;
+    }
+
+    .poetry-card h2 {
+        font-size: 28px;
+    }
+
+    .poetry-text p {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+}
+
+/* =========================================
+   ROMANTIC CINEMATIC CLOSING
+   ========================================= */
+
+.closing-section {
+    position: relative;
+
+    width: min(900px, 92%);
+
+    margin: 100px auto 60px;
+
+    padding: 80px 25px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 100, 190, 0.10),
+            rgba(80, 20, 110, 0.18),
+            rgba(20, 5, 30, 0.55)
+        );
+
+    border: 1px solid rgba(255, 190, 230, 0.18);
+
+    box-shadow:
+        0 25px 80px rgba(70, 10, 70, 0.35),
+        inset 0 0 60px rgba(255, 100, 200, 0.04);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* Background glow */
+
+.closing-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 80, 190, 0.15);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Content */
+
+.closing-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Heart */
+
+.closing-heart {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 55px;
+
+    color: rgba(255, 190, 230, 0.85);
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 200, 0.6),
+        0 0 40px rgba(255, 60, 190, 0.35);
+
+    animation: closingHeart 2.5s ease-in-out infinite;
+}
+
+
+@keyframes closingHeart {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* Small heading */
+
+.closing-small {
+    margin: 0 0 12px;
+
+    color: rgba(255, 205, 235, 0.75);
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+/* Main heading */
+
+.closing-content h2 {
+    margin: 0 0 25px;
+
+    color: #fff;
+
+    font-size: clamp(30px, 5vw, 48px);
+
+    font-weight: 600;
+
+    text-shadow:
+        0 0 15px rgba(255, 150, 220, 0.45),
+        0 0 35px rgba(255, 80, 190, 0.25);
+}
+
+
+/* Message */
+
+.closing-message {
+    width: min(600px, 90%);
+
+    margin: 0 auto;
+
+    color: rgba(255, 235, 248, 0.88);
+
+    font-size: clamp(17px, 2.4vw, 21px);
+
+    line-height: 2.2;
+}
+
+
+/* Decorative line */
+
+.closing-line {
+    width: 90px;
+    height: 1px;
+
+    margin: 30px auto;
+
+    background: rgba(255, 190, 230, 0.55);
+
+    box-shadow:
+        0 0 12px rgba(255, 100, 200, 0.5);
+}
+
+
+/* Signature */
+
+.closing-signature {
+    margin: 0;
+
+    color: rgba(255, 190, 230, 0.9);
+
+    font-size: 17px;
+
+    text-shadow:
+        0 0 12px rgba(255, 100, 200, 0.4);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .closing-section {
+        width: 94%;
+
+        margin: 65px auto 40px;
+
+        padding: 60px 18px;
+
+        border-radius: 30px;
+    }
+
+    .closing-heart {
+        font-size: 45px;
+    }
+
+    .closing-small {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .closing-content h2 {
+        font-size: 30px;
+    }
+
+    .closing-message {
+        width: 94%;
+
+        font-size: 16px;
+
+        line-height: 2;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .closing-section {
+        padding: 50px 14px;
+    }
+
+    .closing-content h2 {
+        font-size: 27px;
+    }
+
+    .closing-message {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================
+   CINEMATIC ANIMATED BACKGROUND
+   ========================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 70, 180, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(150, 50, 220, 0.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 85%,
+            rgba(255, 100, 200, 0.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #180719,
+            #260b2d,
+            #120516,
+            #21091f
+        );
+
+    background-size:
+        180% 180%,
+        180% 180%,
+        180% 180%,
+        300% 300%;
+
+    animation: cinematicBackground 18s ease infinite;
+
+    background-attachment: fixed;
+}
+
+
+/* Slowly moving background */
+
+@keyframes cinematicBackground {
+
+    0% {
+        background-position:
+            0% 0%,
+            100% 0%,
+            50% 100%,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            100% 100%,
+            0% 100%,
+            100% 0%,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0% 0%,
+            100% 0%,
+            50% 100%,
+            0% 50%;
+    }
+
+}
+
+
+/* =========================================
+   CINEMATIC LIGHT VIGNETTE
+   ========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 45%,
+            rgba(5, 0, 10, 0.38) 100%
+        );
+}
+
+
+/* =========================================
+   MOBILE PERFORMANCE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background-attachment: scroll;
+
+        animation-duration: 25s;
+    }
+
+}
+
+/* =========================================
+   CINEMATIC FLOATING HEARTS
+   ========================================= */
+
+.floating-hearts span {
+    bottom: -80px;
+
+    opacity: 0;
+
+    animation:
+        cinematicHeartFloat
+        var(--heart-speed, 12s)
+        linear
+        infinite;
+
+    filter: blur(var(--heart-blur, 0px));
+
+    transform: translateX(0) rotate(0deg);
+
+    will-change: transform, opacity;
+}
+
+
+/* Different positions */
+
+.floating-hearts span:nth-child(1) {
+    left: 8%;
+    font-size: 22px;
+    --heart-speed: 13s;
+    --heart-blur: 0px;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 20%;
+    font-size: 15px;
+    --heart-speed: 17s;
+    --heart-blur: 1px;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 35%;
+    font-size: 28px;
+    --heart-speed: 15s;
+    --heart-blur: 0px;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 48%;
+    font-size: 18px;
+    --heart-speed: 19s;
+    --heart-blur: 1px;
+    animation-delay: 8s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 62%;
+    font-size: 25px;
+    --heart-speed: 14s;
+    --heart-blur: 0px;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 74%;
+    font-size: 16px;
+    --heart-speed: 18s;
+    --heart-blur: 1px;
+    animation-delay: 7s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 87%;
+    font-size: 30px;
+    --heart-speed: 16s;
+    --heart-blur: 0px;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 94%;
+    font-size: 14px;
+    --heart-speed: 20s;
+    --heart-blur: 1px;
+    animation-delay: 10s;
+}
+
+
+/* Natural floating movement */
+
+@keyframes cinematicHeartFloat {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.65;
+    }
+
+    30% {
+        transform:
+            translate3d(-18px, -30vh, 0)
+            rotate(-8deg)
+            scale(1);
+    }
+
+    55% {
+        transform:
+            translate3d(22px, -60vh, 0)
+            rotate(10deg)
+            scale(1.08);
+    }
+
+    80% {
+        transform:
+            translate3d(-15px, -88vh, 0)
+            rotate(-6deg)
+            scale(0.95);
+
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:
+            translate3d(15px, -115vh, 0)
+            rotate(8deg)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .floating-hearts span {
+        animation-duration: 20s;
+    }
+
+    .floating-hearts span:nth-child(1),
+    .floating-hearts span:nth-child(3),
+    .floating-hearts span:nth-child(5),
+    .floating-hearts span:nth-child(7) {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM PHOTO SHINE EFFECT
+   ========================================= */
+
+.memory-card {
+    isolation: isolate;
+}
+
+
+/* Moving light across the card */
+
+.memory-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.12),
+        transparent
+    );
+
+    transform: skewX(-18deg);
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transition: left 0.8s ease;
+}
+
+
+/* Shine appears on hover */
+
+.memory-card:hover::before {
+    left: 140%;
+}
+
+
+/* Keep content above image */
+
+.memory-card .memory-content {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* Slight card lift */
+
+.memory-card:hover {
+    transform: translateY(-8px) scale(1.01);
+
+    border-color: rgba(255, 180, 225, 0.45);
+
+    box-shadow:
+        0 20px 55px rgba(100, 10, 80, 0.38),
+        0 0 25px rgba(255, 100, 200, 0.10);
+}
+
+
+/* Mobile: remove hover movement */
+
+@media (max-width: 600px) {
+
+    .memory-card:hover {
+        transform: none;
+    }
+
+    .memory-card::before {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   PREMIUM WELCOME PAGE
+   ========================================= */
+
+.welcome-page {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 18px;
+
+    overflow: hidden;
+}
+
+
+/* Cinematic glow behind content */
+
+.welcome-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 70, 190, 0.14);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Main welcome content */
+
+.welcome-content {
+    position: relative;
+    z-index: 3;
+
+    width: min(850px, 94%);
+
+    padding: 65px 35px;
+
+    text-align: center;
+
+    border-radius: 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 150, 220, 0.10),
+            rgba(100, 30, 130, 0.18),
+            rgba(20, 5, 30, 0.48)
+        );
+
+    border: 1px solid rgba(255, 200, 235, 0.22);
+
+    box-shadow:
+        0 30px 90px rgba(70, 5, 70, 0.45),
+        inset 0 0 60px rgba(255, 100, 200, 0.04);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+}
+
+
+/* Small romantic text */
+
+.welcome-content .section-small-title {
+    margin-bottom: 15px;
+
+    color: rgba(255, 210, 238, 0.82);
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 200, 0.45);
+}
+
+
+/* Name */
+
+.welcome-content h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 8vw, 82px);
+
+    font-weight: 600;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 12px rgba(255, 160, 225, 0.55),
+        0 0 35px rgba(255, 80, 190, 0.35),
+        0 0 70px rgba(190, 50, 180, 0.18);
+
+    animation: welcomeNameGlow 3s ease-in-out infinite;
+}
+
+
+@keyframes welcomeNameGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 12px rgba(255, 160, 225, 0.55),
+            0 0 35px rgba(255, 80, 190, 0.35);
+    }
+
+    50% {
+        text-shadow:
+            0 0 18px rgba(255, 190, 235, 0.8),
+            0 0 50px rgba(255, 80, 190, 0.5);
+    }
+
+}
+
+
+/* Birthday heading */
+
+.welcome-content h2 {
+    margin: 20px 0;
+
+    font-size: clamp(25px, 4vw, 40px);
+
+    color: rgba(255, 220, 240, 0.95);
+
+    text-shadow:
+        0 0 18px rgba(255, 120, 210, 0.35);
+}
+
+
+/* Greeting */
+
+.welcome-content p {
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    color: rgba(255, 240, 250, 0.88);
+
+    font-size: clamp(17px, 2.5vw, 21px);
+
+    line-height: 2.2;
+}
+
+
+/* Question */
+
+.welcome-question {
+    margin-top: 35px !important;
+
+    color: #fff !important;
+
+    font-size: clamp(20px, 3vw, 27px) !important;
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 200, 0.4);
+}
+
+
+/* =========================================
+   YES BUTTON
+   ========================================= */
+
+#yesButton {
+    position: relative;
+
+    margin-top: 15px;
+
+    padding: 14px 38px;
+
+    border: 1px solid rgba(255, 220, 240, 0.35);
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 80, 180, 0.85),
+            rgba(150, 40, 160, 0.85)
+        );
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 35px rgba(200, 40, 160, 0.35),
+        0 0 20px rgba(255, 100, 200, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#yesButton:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 15px 45px rgba(200, 40, 160, 0.48),
+        0 0 30px rgba(255, 100, 200, 0.3);
+}
+
+
+#yesButton:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .welcome-page {
+        padding: 20px 12px;
+    }
+
+    .welcome-content {
+        width: 94%;
+
+        padding: 50px 18px;
+
+        border-radius: 28px;
+    }
+
+    .welcome-content .section-small-title {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .welcome-content h1 {
+        font-size: 48px;
+    }
+
+    .welcome-content h2 {
+        font-size: 26px;
+    }
+
+    .welcome-content p {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .welcome-question {
+        font-size: 20px !important;
+    }
+
+    #yesButton {
+        width: min(260px, 90%);
+
+        padding: 13px 25px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .welcome-content {
+        padding: 42px 14px;
+    }
+
+    .welcome-content h1 {
+        font-size: 42px;
+    }
+
+    .welcome-content h2 {
+        font-size: 23px;
+    }
+
+}
+
+/* =========================================
+   WELCOME PAGE — ROMANTIC PARTICLES
+   ========================================= */
+
+.welcome-page::after {
+    content: "✦  ·  ♡  ·  ✧  ·  ♡  ·  ✦";
+
+    position: absolute;
+
+    top: 18%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: rgba(255, 190, 230, 0.22);
+
+    font-size: 22px;
+    letter-spacing: 35px;
+
+    pointer-events: none;
+
+    animation: romanticParticles 6s ease-in-out infinite;
+}
+
+
+@keyframes romanticParticles {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: translateX(-50%) translateY(-12px);
+    }
+
+}
+
+
+/* =========================================
+   WELCOME CONTENT ENTRY ANIMATION
+   ========================================= */
+
+.welcome-content {
+    animation:
+        welcomeContentAppear
+        1.2s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+@keyframes welcomeContentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .welcome-page::after {
+        font-size: 17px;
+        letter-spacing: 15px;
+        top: 12%;
+    }
+
+}
+/* =========================================
+   CINEMATIC YES BUTTON PULSE
+   ========================================= */
+
+#yesButton {
+    animation: yesButtonPulse 2.4s ease-in-out infinite;
+}
+
+
+/* Soft glow behind the button */
+
+#yesButton::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -8px;
+
+    border-radius: inherit;
+
+    background: rgba(255, 80, 190, 0.18);
+
+    filter: blur(14px);
+
+    z-index: -1;
+
+    opacity: 0.7;
+
+    animation: yesButtonGlow 2.4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes yesButtonPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+
+}
+
+
+@keyframes yesButtonGlow {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* Keep click effect */
+
+#yesButton:active {
+    animation: none;
+    transform: scale(0.94);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #yesButton {
+        animation-duration: 2.8s;
+    }
+
+}
+
+/* =========================================
+   WELCOME — CINEMATIC HEART DECORATION
+   ========================================= */
+
+.welcome-page {
+    isolation: isolate;
+}
+
+
+/* Soft heart glow in corners */
+
+.welcome-page .welcome-content::before,
+.welcome-page .welcome-content::after {
+    content: "♡";
+
+    position: absolute;
+
+    color: rgba(255, 180, 225, 0.18);
+
+    font-size: 85px;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 0 25px rgba(255, 90, 190, 0.25);
+
+    animation: cornerHeartFloat 4s ease-in-out infinite;
+}
+
+
+/* Left decoration */
+
+.welcome-page .welcome-content::before {
+    left: 25px;
+    top: 20px;
+
+    transform: rotate(-15deg);
+}
+
+
+/* Right decoration */
+
+.welcome-page .welcome-content::after {
+    right: 25px;
+    bottom: 15px;
+
+    font-size: 65px;
+
+    transform: rotate(15deg);
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes cornerHeartFloat {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0) rotate(-10deg) scale(1);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: translateY(-10px) rotate(5deg) scale(1.08);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .welcome-page .welcome-content::before {
+        left: 10px;
+        top: 10px;
+        font-size: 55px;
+    }
+
+    .welcome-page .welcome-content::after {
+        right: 10px;
+        bottom: 8px;
+        font-size: 45px;
+    }
+
+}
+/* =========================================
+   CINEMATIC TEXT STAGGER ANIMATION
+   ========================================= */
+
+.welcome-content .section-small-title {
+    animation: welcomeTextReveal 0.8s ease 0.3s both;
+}
+
+.welcome-content h1 {
+    animation:
+        welcomeNameReveal 1s ease 0.5s both,
+        welcomeNameGlow 3s ease-in-out 1.5s infinite;
+}
+
+.welcome-content h2 {
+    animation: welcomeTextReveal 0.8s ease 0.8s both;
+}
+
+.welcome-content p {
+    animation: welcomeTextReveal 0.8s ease 1.05s both;
+}
+
+.welcome-content .welcome-question {
+    animation: welcomeTextReveal 0.8s ease 1.3s both;
+}
+
+.welcome-content #yesButton {
+    animation:
+        welcomeButtonReveal 0.8s ease 1.6s both,
+        yesButtonPulse 2.4s ease-in-out 2.4s infinite;
+}
+
+
+/* Text reveal */
+
+@keyframes welcomeTextReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+/* Name reveal */
+
+@keyframes welcomeNameReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.92);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+/* Button reveal */
+
+@keyframes welcomeButtonReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION FOR ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .welcome-content,
+    .welcome-content *,
+    .welcome-page::after {
+        animation: none !important;
+    }
+
+}
+
+/* =========================================
+   FINAL MOBILE POLISH
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .memories-header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .memory-card {
+        width: 100%;
+    }
+
+    .memory-card .memory-photo {
+        height: 250px;
+    }
+
+    .memory-content {
+        padding: 20px 17px;
+    }
+
+    .memory-card h2 {
+        font-size: 21px;
+    }
+
+    .memory-card p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .poetry-section,
+    .closing-section {
+        overflow: hidden;
+    }
+
+}
+
+
+/* Small Android phones */
+
+@media (max-width: 380px) {
+
+    .memory-card .memory-photo {
+        height: 220px;
+    }
+
+    .memory-card h2 {
+        font-size: 19px;
+    }
+
+    .memory-card p {
+        font-size: 14px;
+    }
+
+}
